@@ -11,6 +11,29 @@ interface IGridItem {
   __typename: "MdxProject" | "MdxPage"
 }
 
-const modifyGrid = (data: Array<IGridItem>): Array<IGridItem> => data
+// Define the desired order for homepage tiles
+const desiredOrder = [
+  `/build-and-connect-overview`,
+  `/puzzle-materials`,
+  `/physicalization-process`,
+  `/how-to-use`,
+  `/place-holder`,
+]
+
+const modifyGrid = (data: Array<IGridItem>): Array<IGridItem> => {
+  // Keep only items whose slug matches our desired pages
+  const filtered = data.filter((item) =>
+    desiredOrder.some((slug) => item.slug === slug || item.slug === `${slug}/`)
+  )
+
+  // Sort them in the desired order
+  filtered.sort((a, b) => {
+    const aSlug = a.slug.replace(/\/$/, ``)
+    const bSlug = b.slug.replace(/\/$/, ``)
+    return desiredOrder.indexOf(aSlug) - desiredOrder.indexOf(bSlug)
+  })
+
+  return filtered
+}
 
 export default modifyGrid

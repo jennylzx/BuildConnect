@@ -24,9 +24,11 @@ const config: GatsbyConfig = {
       // See the theme's README for all available options
       options: {
         navigation: [
-          { name: `Projects`, slug: `/projects` },
-          { name: `Art`, slug: `/art` },
-          { name: `About`, slug: `/about` },
+          { name: `Build and Connect Overview`, slug: `/build-and-connect-overview` },
+          { name: `Puzzle materials`, slug: `/puzzle-materials` },
+          { name: `Physicalization process`, slug: `/physicalization-process` },
+          { name: `How to use?`, slug: `/how-to-use` },
+          { name: `Place holder`, slug: `/place-holder` },
         ],
       },
     },
