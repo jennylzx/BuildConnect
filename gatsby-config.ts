@@ -49,6 +49,7 @@ const config: GatsbyConfig = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#b75e09`,
         display: `standalone`,
+        include_favicon: false,
         icons: [
           {
             src: `/android-chrome-192x192.png`,
