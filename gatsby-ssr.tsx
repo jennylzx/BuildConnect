@@ -11,7 +11,7 @@ export const onRenderBody: GatsbySSR["onRenderBody"] = ({ setHeadComponents }) =
       crossOrigin="anonymous"
       key="workSansFont"
     />,
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" key="faviconSvg" />,
+    <link rel="icon" href="/favicon.png" type="image/png" key="faviconPng" />,
     <link rel="icon" href="/favicon.ico" sizes="any" key="faviconIco" />,
   ])
 }
