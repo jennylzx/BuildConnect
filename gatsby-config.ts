@@ -24,11 +24,10 @@ const config: GatsbyConfig = {
       // See the theme's README for all available options
       options: {
         navigation: [
-          { name: `Build and Connect Overview`, slug: `/build-and-connect-overview` },
-          { name: `Puzzle materials`, slug: `/puzzle-materials` },
-          { name: `Physicalization process`, slug: `/physicalization-process` },
-          { name: `How to use?`, slug: `/how-to-use` },
-          { name: `Place holder`, slug: `/place-holder` },
+          { name: `About Build & Connect`, slug: `/build-and-connect-overview` },
+          { name: `Design & Making`, slug: `/physicalization-process` },
+          { name: `Materials & Download`, slug: `/puzzle-materials` },
+          { name: `How to Use It`, slug: `/how-to-use` },
         ],
       },
     },
