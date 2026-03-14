@@ -2,8 +2,10 @@ import type { GatsbyConfig, PluginRef } from "gatsby"
 import "dotenv/config"
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const pathPrefix = process.env.NODE_ENV === `production` ? `/BuildConnect` : ``
 
 const config: GatsbyConfig = {
+  pathPrefix,
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
@@ -11,7 +13,7 @@ const config: GatsbyConfig = {
     siteTitle: `Build and Connect`,
     siteTitleAlt: `Build and Connect`,
     siteHeadline: `Build and Connect`,
-    siteUrl: `https://buildandconnect.netlify.app`,
+    siteUrl: `https://jennylzx.github.io/BuildConnect`,
     siteDescription: `Build and Connect — a physicalization project.`,
     siteImage: `/banner.jpg`,
     siteLanguage: `en`,

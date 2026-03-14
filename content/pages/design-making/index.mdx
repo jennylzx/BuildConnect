@@ -4,6 +4,8 @@ slug: "/physicalization-process"
 cover: "./cover.jpg"
 ---
 
+import { withPrefix } from "gatsby";
+
 # Design & Making
 
 ## Design Objectives
@@ -17,7 +19,7 @@ cover: "./cover.jpg"
 - Testing various puzzle shapes and connection styles.
 
 <img
-  src="/design-iterations.jpg"
+  src={withPrefix("/design-iterations.jpg")}
   alt="Design iteration of different puzzle shapes and connection styles"
   style={{ width: "100%", maxWidth: "800px" }}
 />
@@ -31,7 +33,7 @@ The final system comprises three distinct sizes designed for infinite expansion:
 - **Large Pieces:** Represent physical objects selected by community members for the exhibition.
 
 <img
-  src="/puzzle-piece-design.png"
+  src={withPrefix("/puzzle-piece-design.png")}
   alt="Final puzzle piece design"
   style={{ width: "100%", maxWidth: "800px" }}
 />
@@ -41,7 +43,7 @@ The final system comprises three distinct sizes designed for infinite expansion:
 - **Method:** Laser cutting.
 
 <img
-  src="/laser-cutting.jpg"
+  src={withPrefix("/laser-cutting.jpg")}
   alt="Laser cutting in progress"
   style={{ width: "100%", maxWidth: "800px" }}
 />

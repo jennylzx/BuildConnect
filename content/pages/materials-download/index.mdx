@@ -4,6 +4,8 @@ slug: "/puzzle-materials"
 cover: "./cover.jpg"
 ---
 
+import { withPrefix } from "gatsby";
+
 # Materials & Download
 
 ## Material Selection
@@ -18,14 +20,14 @@ The process involved rigorous testing of cardboard and mountboard. To ensure dur
 - **Scaling for Shrinkage:** The top paper layer may shrink after being mounted. To compensate, scale the print on the Y-axis by 100.01%, or calculate the specific shrinkage rate and adjust the illustration file prior to cutting.
 
 <img
-  src="/fabrication-materials.jpg"
+  src={withPrefix("/fabrication-materials.jpg")}
   alt="Fabrication materials and process"
   style={{ width: "100%", maxWidth: "800px" }}
 />
 
 ## SVG Download
 
-<a href="/downloads/puzzlePieceSmall.svg" download>
+<a href={withPrefix("/downloads/puzzlePieceSmall.svg")} download>
   Click here to download the digital puzzle templates used in the Build &
   Connect project.
 </a>
