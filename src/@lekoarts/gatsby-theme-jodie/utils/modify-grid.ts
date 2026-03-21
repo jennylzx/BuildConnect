@@ -13,10 +13,9 @@ interface IGridItem {
 
 // Define the desired order for homepage tiles
 const desiredOrder = [
-  `/build-and-connect-overview`,
-  `/physicalization-process`,
-  `/puzzle-materials`,
-  `/how-to-use`,
+  `/about`,
+  `/activity-and-toolkit`,
+  `/use-cases`,
 ]
 
 const modifyGrid = (data: Array<IGridItem>): Array<IGridItem> => {

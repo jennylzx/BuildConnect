@@ -1,12 +1,12 @@
 ---
-title: "Design & Making"
-slug: "/physicalization-process"
+title: "Activity and Toolkit"
+slug: "/activity-and-toolkit"
 cover: "./cover.jpg"
 ---
 
 import { withPrefix } from "gatsby";
 
-## Design & Making
+## Activity and Toolkit
 
 ### Design Objectives
 
@@ -38,7 +38,7 @@ The final system comprises three distinct sizes designed for infinite expansion:
   style={{ width: "100%", maxWidth: "800px" }}
 />
 
-## Fabrication Process
+### Fabrication Process
 
 - **Method:** Laser cutting.
 
@@ -47,3 +47,34 @@ The final system comprises three distinct sizes designed for infinite expansion:
   alt="Laser cutting in progress"
   style={{ width: "100%", maxWidth: "800px" }}
 />
+
+### Material Selection
+
+The process involved rigorous testing of cardboard and mountboard. To ensure durability, the mountboard was sealed using a custom PVA-to-water ratio.
+
+**Note:** The optimal mixture found for sealing the mount board during testing was 100ml PVA to (200ml, 250ml, 350ml, and 400ml) of Water.
+
+### Fabrication Notes
+
+- **Safety:** Laser cutting requires materials that do not produce toxic fumes; water-based PVA is the recommended adhesive for this process.
+- **Scaling for Shrinkage:** The top paper layer may shrink after being mounted. To compensate, scale the print on the Y-axis by 100.01%, or calculate the specific shrinkage rate and adjust the illustration file prior to cutting.
+
+<img
+  src={withPrefix("/fabrication-materials.jpg")}
+  alt="Fabrication materials and process"
+  style={{ width: "100%", maxWidth: "800px" }}
+/>
+
+### Puzzle SVG Download
+
+<a href={withPrefix("/downloads/puzzlePieceLarge.svg")} download>
+  Large
+</a>
+
+<a href={withPrefix("/downloads/puzzlePieceMid.svg")} download>
+  Medium
+</a>
+
+<a href={withPrefix("/downloads/puzzlePieceSmall.svg")} download>
+  Small
+</a>
