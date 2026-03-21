@@ -64,11 +64,21 @@ const Homepage: React.FC<PageProps<JodieHomepageProps>> = ({ data }) => {
               key={item.title}
               sx={{
                 minHeight: [`200px`, `250px`, `0`],
+                gridColumn:
+                  item.slug === `/activity-and-toolkit`
+                    ? ["auto", "auto", `1 / 2`]
+                    : ["auto", "auto", `2 / 3`],
+                gridRow:
+                  item.slug === `/activity-and-toolkit`
+                    ? ["auto", "auto", `1 / 3`]
+                    : item.slug === `/about`
+                      ? ["auto", "auto", `1 / 2`]
+                      : ["auto", "auto", `2 / 3`],
               }}
               data-testid={item.title}
             >
               <GatsbyImage
-                loading={index === 0 ? `eager` : `lazy`}
+                loading={item.slug === `/activity-and-toolkit` || index === 0 ? `eager` : `lazy`}
                 image={item.cover.childImageSharp.gatsbyImageData}
                 alt=""
               />
