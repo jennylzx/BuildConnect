@@ -58,33 +58,44 @@ const Homepage: React.FC<PageProps<JodieHomepageProps>> = ({ data }) => {
         }}
       >
         {items.length > 0 ? (
-          items.map((item, index) => (
-            <GridItem
-              to={item.slug}
-              key={item.title}
-              sx={{
-                minHeight: [`200px`, `250px`, `0`],
-                gridColumn:
-                  item.slug === `/activity-and-toolkit`
-                    ? ["auto", "auto", `1 / 2`]
-                    : ["auto", "auto", `2 / 3`],
-                gridRow:
-                  item.slug === `/activity-and-toolkit`
+          items.map((item, index) => {
+            const isActivityAndToolkit = item.slug === `/activity-and-toolkit`
+
+            return (
+              <GridItem
+                to={item.slug}
+                key={item.title}
+                sx={{
+                  minHeight: [`200px`, `250px`, `0`],
+                  gridColumn: isActivityAndToolkit ? ["auto", "auto", `1 / 2`] : ["auto", "auto", `2 / 3`],
+                  gridRow: isActivityAndToolkit
                     ? ["auto", "auto", `1 / 3`]
                     : item.slug === `/about`
                       ? ["auto", "auto", `1 / 2`]
                       : ["auto", "auto", `2 / 3`],
-              }}
-              data-testid={item.title}
-            >
-              <GatsbyImage
-                loading={item.slug === `/activity-and-toolkit` || index === 0 ? `eager` : `lazy`}
-                image={item.cover.childImageSharp.gatsbyImageData}
-                alt=""
-              />
-              <span>{item.title}</span>
-            </GridItem>
-          ))
+                }}
+                data-testid={item.title}
+              >
+                <GatsbyImage
+                  loading={isActivityAndToolkit || index === 0 ? `eager` : `lazy`}
+                  image={item.cover.childImageSharp.gatsbyImageData}
+                  alt=""
+                  imgStyle={
+                    isActivityAndToolkit
+                      ? {
+                          objectFit: `cover`,
+                          objectPosition: `center 35%`,
+                        }
+                      : {
+                          objectFit: `cover`,
+                          objectPosition: `center center`,
+                        }
+                  }
+                />
+                <span>{item.title}</span>
+              </GridItem>
+            )
+          })
         ) : (
           <div sx={{ padding: 3 }}>
             No projects and pages found at the locations defined for "projectsPath" and "pagesPath"
